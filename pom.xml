@@ -9,6 +9,7 @@
 	<description>The Pizzeria factory example</description>
 
 	<properties>
+		<maven.surefire.version>2.22.2</maven.surefire.version>
 		<junit.version>4.13</junit.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         	<!--<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>-->
@@ -37,6 +38,11 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
